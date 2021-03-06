@@ -143,10 +143,15 @@ main {
   text-transform: none;
   margin-bottom: 2rem;
 }
+.items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .person {
   display: grid;
   grid-template-columns: auto 1fr;
-  column-gap: 0.75rem;
+  column-gap: .75rem;
   margin-bottom: 1.5rem;
   align-items: center;
 }
@@ -163,7 +168,15 @@ main {
 .person p {
   margin-bottom: 0;
 }
-.container button {
+.btn {
+  color: var(--clr-grey-5);
+  background: var(--clr-primary-3);
+  border-color: transparent;
+  border-radius: var(--radius);
+  padding: 0 .2rem;
+  
+}
+.clear-btn {
   color: var(--clr-white);
   display: block;
   width: 100%;

@@ -1,18 +1,26 @@
 import React from 'react';
 
-
-const List = ({ people }) => {
+const List = (props) => {
   // people props 👆🏼 is destrctured right away
+  
+  const remove = (id) => {
+    props.handleRemove(id)
+  }
+
+  const arr = props.people
   return (
     <>
-      {people.map((person) => {
+      {arr.map((person) => {
         const { id, name, age, image } = person;
         return (
           <article key={id} className='person'>
             <img src={image} alt={name} />
-            <div>
-              <h4>{name}</h4>
-              <p>{age} years</p>
+            <div className='items'>
+              <div>
+                <h4>{name}</h4>
+                <p>{age} years</p>
+              </div>
+              <button className='btn' onClick={()=>remove(id)}>Remove</button>
             </div>
           </article>
         );
