@@ -1,13 +1,13 @@
 import React from 'react';
 
 const List = (props) => {
-  // people props 👆🏼 is destrctured right away
   
   const remove = (id) => {
     props.handleRemove(id)
   }
 
-  const arr = props.people
+  const arr = props.people;
+  
   return (
     <>
       {arr.map((person) => {
@@ -20,7 +20,7 @@ const List = (props) => {
                 <h4>{name}</h4>
                 <p>{age} years</p>
               </div>
-              <button className='btn' onClick={()=>remove(id)}>Remove</button>
+              <button className='btn' onClick={()=> remove(id)}>Remove</button>
             </div>
           </article>
         );
